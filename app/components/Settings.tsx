@@ -10,7 +10,7 @@ export default function SettingsMenu() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-end">
       <button
         onClick={() => setOpen(!open)}
         className="p-2 rounded-full bg-secondaryBackground text-foreground border border-foreground/20 hover:bg-foreground hover:text-background transition"
@@ -23,7 +23,7 @@ export default function SettingsMenu() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-background border border-foreground/10 p-4 z-50"
+          className="absolute right-0 mt-12 w-48 rounded-lg shadow-lg bg-background border border-foreground/10 p-4 z-50"
         >
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
