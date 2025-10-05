@@ -1,18 +1,36 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import SettingsMenu from "./Settings";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-darkAppColor p-4 shadow-md sticky">
-      <div className="container mx-auto">
+    <nav className="bg-background p-4 shadow-md sticky top-0">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo or title */}
+        <h1 className="text-foreground font-bold text-lg">Jesper</h1>
+
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center space-x-4">
+          <Link className="navbarLink" href="/pages/about">
+            Om mig
+          </Link>
+          <Link className="navbarLink" href="/pages/projects">
+            Projekter
+          </Link>
+          <Link className="navbarLink" href="/pages/contact">
+            Kontakt
+          </Link>
+          <SettingsMenu />
+        </div>
+
         {/* Mobile menu button */}
-        <div className="flex justify-between items-center md:hidden">
+        <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white p-2"
+            className="text-foreground p-2"
             aria-label="Toggle menu"
           >
             <svg
@@ -38,35 +56,36 @@ export default function NavBar() {
               )}
             </svg>
           </button>
-          <span className="text-white font-semibold">Home Project</span>
-        </div>
-
-        <div className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
-          <div className="flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0">
-            <Link
-              className="navbarLink"
-              href="/pages/about"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Om mig
-            </Link>
-            <Link
-              className="navbarLink"
-              href="/pages/projects"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projekter
-            </Link>
-            <Link
-              className="navbarLink"
-              href="/pages/contact"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Kontakt
-            </Link>
-          </div>
         </div>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-2 space-y-2">
+          <Link
+            className="navbarLink block"
+            href="/pages/about"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Om mig
+          </Link>
+          <Link
+            className="navbarLink block"
+            href="/pages/projects"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Projekter
+          </Link>
+          <Link
+            className="navbarLink block"
+            href="/pages/contact"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Kontakt
+          </Link>
+          <SettingsMenu />
+        </div>
+      )}
     </nav>
   );
 }
