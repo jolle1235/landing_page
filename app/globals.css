@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9f9f9;
+  --foreground: #212227;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #212227;
+    --foreground: #f9f9f9;
+    --secondaryBackground: #323132;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondaryBackground: var(--secondaryBackground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarLink {
+  color: var(--foreground);
+  background: var(--secondaryBackground);
+  @apply py-2 rounded-lg px-4;
 }

@@ -1,11 +1,9 @@
-import AboutMe from "./components/AboutMe";
-import DownloadCV from "./components/Download";
+import AboutMe from "@/app/components/AboutMe";
 
-export default function Home() {
+export default function About() {
   return (
     <div className="bg-background h-full w-full p-5 flex flex-col items-center justify-center gap-4">
       <AboutMe />
-      <DownloadCV />
     </div>
   );
 }
