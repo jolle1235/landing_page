@@ -14,14 +14,17 @@ export default function NavBar() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-4">
+          <Link className="navbarLink" href="/">
+            Home
+          </Link>
           <Link className="navbarLink" href="/pages/about">
-            Om mig
+            About me
           </Link>
           <Link className="navbarLink" href="/pages/projects">
-            Projekter
+            Projects
           </Link>
           <Link className="navbarLink" href="/pages/contact">
-            Kontakt
+            Contacts
           </Link>
           <SettingsMenu />
         </div>
@@ -64,24 +67,31 @@ export default function NavBar() {
         <div className="md:hidden mt-2 space-y-2">
           <Link
             className="navbarLink block"
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            className="navbarLink block"
             href="/pages/about"
             onClick={() => setIsMenuOpen(false)}
           >
-            Om mig
+            About me
           </Link>
           <Link
             className="navbarLink block"
             href="/pages/projects"
             onClick={() => setIsMenuOpen(false)}
           >
-            Projekter
+            Projects
           </Link>
           <Link
             className="navbarLink block"
             href="/pages/contact"
             onClick={() => setIsMenuOpen(false)}
           >
-            Kontakt
+            Contact
           </Link>
           <SettingsMenu />
         </div>
