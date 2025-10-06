@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Swiftcart",
+    "description": "Full-stack web application that lets users create shopping lists, compare prices across multiple stores, and optimize grocery budgets.",
+    "experiences": [
+      "Designed and implemented the majority of the React frontend with focus on usability, responsive design, and clear user journeys.",
+      "Collaborated on backend integration with Node.js and MongoDB to build scalable, data-driven features.",
+      "Owned features from idea to delivery within a SCRUM process, ensuring continuous feedback and iteration."
+    ],
+    "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "REST APIs"]
+  },
+  {
+    "title": "Web Architecture and Orchestration (Course Project)",
+    "description": "Course project to develop a scalable backend system based on microservice architecture with an emphasis on orchestration and service communication.",
+    "experiences": [
+      "Developed a scalable backend system based on microservice architecture.",
+      "Implemented service-to-service communication using REST and gRPC.",
+      "Orchestrated containerized services with Kubernetes and focused on scalability, observability, and fault tolerance."
+    ],
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "gRPC",
+      "REST APIs",
+      "Grafana",
+      "Prometheus"
+    ]
+  },
+  {
+    "title": "Machine Learning (SWMAL-01) (Course Project)",
+    "description": "5 ECTS course project focused on machine learning theory and practical pipelines in Python.",
+    "experiences": [
+      "Worked with ML pipelines: data preparation, model selection, and evaluation.",
+      "Applied algorithms including regression, neural networks, and dimensionality reduction.",
+      "Implemented and compared models using Python ML frameworks and improved performance through preprocessing and evaluation."
+    ],
+    "technologies": [
+      "Python",
+      "pandas",
+      "NumPy",
+      "scikit-learn",
+      "TensorFlow / PyTorch"
+    ]
+  },
+  {
+    "title": "Advanced Front-End Development (Course Project)",
+    "description": "Training application focusing on modern front-end technologies (Angular and Next.js) with emphasis on SSR, PWA, and responsive single-page applications.",
+    "experiences": [
+      "Developed web applications using Angular and Next.js.",
+      "Worked with server-side rendering (SSR) and Progressive Web App (PWA) features.",
+      "Designed and implemented responsive layouts and component-based architectures."
+    ],
+    "technologies": ["Angular", "Next.js", "TypeScript", "PWA", "SSR"]
+  },
+  {
+    "title": "Recipe Web Application (Personal Project)",
+    "description": "Web application for storing household recipes, adding and viewing recipes, and planning weekly meals. Planned future features include recipe import and automatic shopping list generation.",
+    "experiences": [
+      "Strengthened skills in web application design and feature planning.",
+      "Turned user needs into practical, scalable solutions through iterative development.",
+      "Explored extensions and feature planning to keep the project maintainable and extensible."
+    ],
+    "technologies": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Git / GitHub"
+    ],
+    "repository": "https://github.com/jolle1235/home-project"
+  }
+]
